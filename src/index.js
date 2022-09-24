@@ -48,9 +48,18 @@ const refs = {
 
 refs.form.addEventListener("submit", onSearch)
 
-async function onSearch(element) {
-    element.preventDefault()
+async function onSearch(e) {
+  e.preventDefault()
+  
 
+     if (e.currentTarget.elements.searchQuery.value == '') {
+        Notify.info('Come on, type something :)')
+        return
+    }
+
+    imgApiService.searchQuery = e.target.elements.searchQuery.value
+
+  
     const response = await imgApiService.fetchIMG()
     const searchResults = response.data.hits
        
