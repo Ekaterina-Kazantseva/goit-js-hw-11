@@ -1,0 +1,24 @@
+.header {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    position: fixed;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    background-color: rgb(81, 124, 225);
+}
+
+;
+
+.search-form>input {
+    padding-left: 8px;
+    padding-right: 8px;
+
+    min-width: 300;
+    height: 30;
+    border: 1px solid black;
+}
